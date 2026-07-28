@@ -2,8 +2,8 @@ name: Send News Summary
 
 on:
   schedule:
-    - cron: '30 4 * * *'   # ۸ صبح به وقت ایران
-    - cron: '30 16 * * *'  # ۸ شب به وقت ایران
+    - cron: '30 4 * * *'
+    - cron: '30 16 * * *'
   workflow_dispatch:
 
 jobs:
