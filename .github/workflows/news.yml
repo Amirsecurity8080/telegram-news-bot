@@ -1,0 +1,28 @@
+name: Send News Summary
+
+on:
+  schedule:
+    - cron: '30 4 * * *'   # ۸ صبح به وقت ایران
+    - cron: '30 16 * * *'  # ۸ شب به وقت ایران
+  workflow_dispatch:
+
+jobs:
+  send-news:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Run script
+        run: python send_news.py
+        env:
+          BOT_TOKEN: ${{ secrets.BOT_TOKEN }}
+          CHANNEL_ID: ${{ secrets.CHANNEL_ID }}
