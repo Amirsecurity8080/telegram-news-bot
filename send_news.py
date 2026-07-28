@@ -26,7 +26,7 @@ if len(message) > 4000:
 response = requests.post(
     f"https://api.telegram.org/bot{8938523902:AAHNQknqLLk1DWmhHdwF0ZEDCq4F-PP3_jU}/sendMessage",
     data={
-        "chat_id": CHANNEL_ID,
+        "chat_id": -1003274837538,
         "text": message,
         "disable_web_page_preview": False
     }
