@@ -2,8 +2,8 @@ import feedparser
 import requests
 import os
 
-BOT_TOKEN = os.environ["BOT_TOKEN"]
-CHANNEL_ID = os.environ["CHANNEL_ID"]
+BOT_TOKEN = os.environ["8938523902:AAHNQknqLLk1DWmhHdwF0ZEDCq4F-PP3_jU"]
+CHANNEL_ID = os.environ["-1003274837538"]
 
 # می‌تونی چند تا RSS اضافه کنی
 RSS_FEEDS = [
